@@ -14,6 +14,7 @@ public class application {
 		
 		ParkingEntity e= ParkingSarvice.data();
 		
+		
 		SessionFactory sf=HibernateUtil.getSessionFactory();
 		
 		Session s = sf.openSession();
@@ -23,10 +24,11 @@ public class application {
 		ParkingEntity ex= s.get(ParkingEntity.class, e.getSloatNo());
 		
 		if(ex != null) {
-			System.out.println("Data already Exists");
+			System.out.println("Data already Exists try other sloats");
 		}else {
 			System.out.println("Data inserted Successdfully.");
 		}
+		
 		
 		s.persist(e);
 		t.commit();
