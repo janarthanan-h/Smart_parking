@@ -1,0 +1,37 @@
+package org.sps;
+
+
+import java.util.Scanner;
+
+public class SPSfuction {
+	
+	static SPSEntitys data() {
+		
+		SPSEntitys e=new SPSEntitys();
+		
+		Scanner sc =new Scanner(System.in);
+		
+		System.out.println("Enter the Sloat number");
+		e.setSloatNo(sc.nextInt());
+		
+		System.out.println("Enter the Coustermar Name");
+		e.setName(sc.nextLine());
+		sc.nextLine();
+		
+		System.out.println("Enter the Car Number");
+		e.setCarNumber(sc.nextLine());
+		
+		System.out.println("Enter the Duuration");
+		e.setDuration(sc.nextInt());
+		
+		System.out.println("Enter the Amount");
+		e.setAmount(sc.nextInt());
+		
+		return e;
+		
+	}
+	
+	
+	
+
+}
