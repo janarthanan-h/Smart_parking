@@ -1,13 +1,14 @@
-package org.sps;
-
+package Sarvice;
 
 import java.util.Scanner;
+import Entity.ParkingEntity;
 
-public class SPSfuction {
-	
-	static SPSEntitys data() {
+
+public class ParkingSarvice{
+
+	 public static ParkingEntity data() {
 		
-		SPSEntitys e=new SPSEntitys();
+		ParkingEntity e=new  ParkingEntity();
 		
 		Scanner sc =new Scanner(System.in);
 		
@@ -27,11 +28,9 @@ public class SPSfuction {
 		System.out.println("Enter the Amount");
 		e.setAmount(sc.nextInt());
 		
+		
 		return e;
 		
+		
 	}
-	
-	
-	
-
 }

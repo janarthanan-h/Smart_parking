@@ -1,12 +1,10 @@
-package org.sps;
+package Entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class SPSEntitys {
+public class ParkingEntity {
 	@Id
 	private int sloatNo;
 	private String Name;
@@ -45,11 +43,4 @@ public class SPSEntitys {
 		this.amount = amount;
 	}
 
-	
-	
-
-
-	
-	
-	
 }
