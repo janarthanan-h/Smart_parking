@@ -11,7 +11,7 @@ import Entity.ParkingEntity;
 
 public class ParkingSarvice{
 
-	 public static ParkingEntity data() {
+	 public static  ParkingEntity data() {
 		 Scanner sc=new Scanner(System.in);
 		 ParkingEntity p=new ParkingEntity(); 
 		 DateTimeFormatter format= DateTimeFormatter.ofPattern("H:mm");
@@ -33,7 +33,7 @@ public class ParkingSarvice{
 		                }
 		                case "in":{
 		                	
-		                	System.out.print("Enter Slot No: ");
+		                	System.out.print("Enter Slot No:");
 		            		p.setSloatNo(Integer.parseInt(sc.next().trim()));	
 		            		sc.nextLine();
 		            		
@@ -65,6 +65,11 @@ public class ParkingSarvice{
 		                }
 		                    
 		                case "exit":{
+		                	int n =sc.nextInt();
+		                	for(int i=0;i<=n;i++) {
+		                		System.out.println("Enetr Sloat Number You wont to Delet");
+			                	ParkingDao.deleteData(n);
+		                	}
 		                    System.out.println("Thank you for using ");
 		                    
 		                    

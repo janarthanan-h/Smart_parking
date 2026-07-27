@@ -4,12 +4,15 @@ import java.time.Duration;
 import java.time.LocalTime;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class ParkingEntity{
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int SloatNo;
 	private String DriverName;
 	private String carNumber;
