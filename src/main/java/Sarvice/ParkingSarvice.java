@@ -1,5 +1,6 @@
 package Sarvice;
 
+
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -26,8 +27,8 @@ public class ParkingSarvice{
 		           choice = sc.next().toLowerCase(); 
 
 		            switch (choice) {
-		                case "Sloats":{
-		                	ParkingDao.Sloat();
+		                case "sloats":{
+		                	ParkingDao.getParkingData();
 		                	break;
 		                }
 		                case "in":{
@@ -52,22 +53,21 @@ public class ParkingSarvice{
 		            		break;
 		                }
 		                case "out":{
-		                	
-		                	System.out.println("Enter Sloat No");
-		                	int slotNo = Integer.parseInt(sc.next().trim());
-		                	p.setSloatNo(slotNo);
-		                	
+		                	System.out.print("Enter Slot No: ");
+		            		p.setSloatNo(Integer.parseInt(sc.next().trim()));	
+		            		sc.nextLine();
+		            		
 		                	System.out.print("Enter Out-Time (H:mm, e.g. 4:30): ");
 		            		LocalTime outTime = LocalTime.parse(sc.next().trim(), format);
 		            		
 		            		p.setOutTime(outTime);
-//		            		ParkingDao.delet(slotNo);
-		            		
 		            		break;
 		                }
 		                    
 		                case "exit":{
 		                    System.out.println("Thank you for using ");
+		                    
+		                    
 		                    break;
 		                }
 

@@ -11,13 +11,10 @@ public class ParkingEntity{
 	
 	@Id
 	private int SloatNo;
-	
 	private String DriverName;
 	private String carNumber;
-	
 	private LocalTime inTime;
 	private LocalTime outTime;
-	
 	private float duration;
 	private int amount;
 	
@@ -57,7 +54,6 @@ public class ParkingEntity{
 	}
 	public void setOutTime(LocalTime outTime) {
 		this.outTime = outTime;
-		
 		calcutation();
 	}
 	//time Duration
