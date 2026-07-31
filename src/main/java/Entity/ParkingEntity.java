@@ -12,16 +12,24 @@ import jakarta.persistence.Id;
 public class ParkingEntity{
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int slno;
 	private int SloatNo;
 	private String DriverName;
 	private String carNumber;
+	
 	private LocalTime inTime;
 	private LocalTime outTime;
+	
 	private float duration;
-	private int amount;
+	private float amount;
 	
-	
+	// slno 
+	public int getSlno() {
+		return slno;
+	}
+	public void setSlno(int slno) {
+		this.slno = slno;
+	}
 	// SloatNumber
 	public int getSloatNo() {
 		return SloatNo;
@@ -57,7 +65,7 @@ public class ParkingEntity{
 	}
 	public void setOutTime(LocalTime outTime) {
 		this.outTime = outTime;
-		calcutation();
+//		calcutation();
 	}
 	//time Duration
 	public float getDuration() {
@@ -67,26 +75,28 @@ public class ParkingEntity{
 		this.duration = duration;
 	}
 	//Amount =Duration *40
-	public int getAmount() {
+	public float getAmount() {
 		return amount;
 	}
-	public void setAmount(int amount) {
-		this.amount = amount;
+	public void setAmount(float amount2) {
+		this.amount = amount2;
 	}
 	
 	
-	private void calcutation() {
-		if (inTime != null && outTime != null) {
-			Duration D = Duration.between(inTime, outTime);
-			
-			long Min = D.toMinutes();
-			
-			this.duration =Min/60f;
-			this.amount = Math.round(this.duration*40);
-			
-		}
-		
-	}
+//	private void calcutation() {
+//		if (inTime != null && outTime != null) {
+//			Duration D = Duration.between(inTime, outTime);
+//			
+//			long Min = D.toMinutes();
+//			
+//			this.duration =Min/60f;
+//			this.amount = Math.round(this.duration*40);
+//			System.out.println(amount);
+//		}
+//		
+//	}
+	
+
 
 	
 	
